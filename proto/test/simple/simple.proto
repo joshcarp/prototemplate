@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package test.simple;
+import "google/protobuf/any.proto";
+import "google/protobuf/struct.proto";
+
+
+
+message Message1{
+  string string = 1;
+  int32 int32 = 2;
+  bytes bytes = 3;
+  Enum1 enum = 4;
+  Message2 message = 5;
+  google.protobuf.Any any = 6;
+  google.protobuf.Value value = 7;
+}
+
+
+message Message2{
+  string string = 1;
+  int32 int32 = 2;
+  bytes bytes = 3;
+  Enum1 enum = 4;
+  Message3 message = 5;
+}
+
+message Message3{
+  string string = 1;
+  int32 int32 = 2;
+  bytes bytes = 3;
+  Enum1 enum = 4;
+}
+
+enum Enum1 {
+  Foo = 0;
+  Bar = 1;
+}
